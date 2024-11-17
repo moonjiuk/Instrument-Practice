@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Piano</title>
+    
+    <!--CSS-->
+    <link rel="reset" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style_piano.css">
+    
+    <!--JS-->
+    <script src="js/custum.js"></script>
+    
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header">
+                    <h1>Piano</h1>
+                </div>
+            </div>
+        </div>
+        <div id="contents">
+            <div class="container">
+                <div class="contents">
+                   <!--코드 선택지-->
+                   <div id="code_select">
+                        <div id="root">
+                           <li>
+                               <div><label for="C">C</label></div>
+                              <input id="C" type="checkbox" name="root" value="1" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="C#">C#</label></div>
+                              <input id="C#" type="checkbox" name="root" value="2" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="D">D</label></div>
+                              <input id="D" type="checkbox" name="root" value="3" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="D#">D#</label></div>
+                              <input id="D#" type="checkbox" name="root" value="4" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="E">E</label></div>
+                              <input id="E" type="checkbox" name="root" value="5" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="F">F</label></div>
+                              <input id="F" type="checkbox" name="root" value="6" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="F#">F#</label></div>
+                              <input id="F#" type="checkbox" name="root" value="7" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="G">G</label></div>
+                              <input id="G" type="checkbox" name="root" value="8" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="G#">G#</label></div>
+                              <input id="G#" type="checkbox" name="root" value="9" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="A">A</label></div>
+                              <input id="A" type="checkbox" name="root" value="10" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="A#">A#</label></div>
+                              <input id="A#" type="checkbox" name="root" value="11" onclick="doOpenCheck_root(this);">
+                           </li>
+                           <li>
+                               <div><label for="B">B</label></div>
+                              <input id="B" type="checkbox" name="root" value="12" onclick="doOpenCheck_root(this);">
+                           </li>
+                        </div>
+                        <div id="Mm">
+                            <li>
+                               <div><label for="major">major</label></div>
+                              <input id="major" type="checkbox" name="code_name" value="1" onclick="doOpenCheck_codename(this);">
+                           </li>
+                           <li>
+                               <div><label for="minor">minor</label></div>
+                              <input id="minor" type="checkbox" name="code_name" value="2" onclick="doOpenCheck_codename(this);">
+                           </li>
+                           <li>
+                               <div><label for="dim">dim</label></div>
+                              <input id="dim" type="checkbox" name="code_name" value="3" onclick="doOpenCheck_codename(this);">
+                           </li>
+                           <li>
+                               <div><label for="aug">aug</label></div>
+                              <input id="aug" type="checkbox" name="code_name" value="4" onclick="doOpenCheck_codename(this);">
+                           </li>
+                           <li>
+                               <div><label for="sos4">sos4</label></div>
+                              <input id="sus4" type="checkbox" name="code_name" value="5" onclick="doOpenCheck_codename(this);">
+                           </li>
+                        </div>
+                        <div id="dominant">
+                            <li>
+                                <div><label for="M7">M7</label></div>
+                                <input id="M7" type="checkbox" name="dominant" value="1" onclick="doOpenCheck_dominant(this);">
+                            </li>
+                            <li>
+                                <div><label for="7">7</label></div>
+                                <input id="7" type="checkbox" name="dominant" value="2" onclick="doOpenCheck_dominant(this);">
+                            </li>
+                       </div>
+                       <div id="tension">
+                            <li>
+                                <div><label for="b9">b9</label></div>
+                                <input id="b9" type="checkbox" name="dtension" value="1" onclick="doOpenCheck_tension(this);">
+                            </li>
+                            <li>
+                                <div><label for="9">9</label></div>
+                                <input id="9" type="checkbox" name="tension" value="2" onclick="doOpenCheck_tension(this);">
+                            </li>
+                            <li>
+                                <div><label for="#9">#9</label></div>
+                                <input id="#9" type="checkbox" name="tension" value="2" onclick="doOpenCheck_tension(this);">
+                            </li>
+                            <li>
+                                <div><label for="11">11</label></div>
+                                <input id="11" type="checkbox" name="tension" value="2" onclick="doOpenCheck_tension(this);">
+                            </li>
+                            <li>
+                                <div><label for="#11">#11</label></div>
+                                <input id="#11" type="checkbox" name="tension" value="2" onclick="doOpenCheck_tension(this);">
+                            </li>
+                            <li>
+                                <div><label for="b13">b13</label></div>
+                                <input id="b13" type="checkbox" name="tension" value="2" onclick="doOpenCheck_tension(this);">
+                            </li>
+                            <li>
+                                <div><label for="13">13</label></div>
+                                <input id="13" type="checkbox" name="tension" value="2" onclick="doOpenCheck_tension(this);">
+                            </li>
+                            <li>
+                                <div><label for="#13">#13</label></div>
+                                <input id="#13" type="checkbox" name="tension" value="2" onclick="doOpenCheck_tension(this);">
+                            </li>
+                       </div>
+                    </div>
+                    <!--//코드 선택지-->
+
+                   <!--피아노-->
+                   <div class="piano-wrapper">
+                    <ul class="piano">
+                      <li class="key">
+                        <span class="white-key">다</span>
+                        <span class="black-key">다#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">라</span>
+                        <span class="black-key">라#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">마</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">바</span>
+                        <span class="black-key">바#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">사</span>
+                        <span class="black-key">사#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">가</span>
+                        <span class="black-key">가#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">나</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">다</span>
+                        <span class="black-key">다#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">라</span>
+                        <span class="black-key">라#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">마</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">바</span>
+                        <span class="black-key">바#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">사</span>
+                        <span class="black-key">사#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">가</span>
+                        <span class="black-key">가#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">나</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">다</span>
+                        <span class="black-key">다#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">라</span>
+                        <span class="black-key">라#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">마</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">바</span>
+                        <span class="black-key">바#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">사</span>
+                        <span class="black-key">사#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">가</span>
+                        <span class="black-key">가#</span>
+                      </li>
+                      <li class="key">
+                        <span class="white-key">나</span>
+                      </li>
+                    </ul>
+                   </div>
+                   <!--//피아노-->
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="footer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
